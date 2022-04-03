@@ -1,0 +1,1189 @@
+Project Title,Submission Url,Project Status,Judging Status,Highest Step Completed,Project Created At,About The Project,"""Try it out"" Links",Video Demo Link,Opt-In Prizes,Built With,Notes,Team Colleges/Universities,Additional Team Member Count,Body,Electrical,Design,Software
+VR controlled Remote surgery system,"",Draft,Pending,Additional info,04/01/2022 14:02:52,"","",,"","",,"Vellore Institute of Technology, Vellore , Rutgers, The State University of New Jersey",2,yes,yes,no,yes
+Drones as a Solution to Last-Mile Delivery Inefficiencies,https://robotech2022.devpost.com/submissions/317456-drones-as-a-solution-to-last-mile-delivery-inefficiencies,Submitted (Gallery/Visible),Pending,Submit,04/01/2022 14:06:37,"Inspiration
+
+The idea for the drone was similar to a project that one of our team members had done in the past. While brainstorming about solutions for the sustainability theme and considering the components available to us, we settled on building the drone during this hackathon.
+
+What it does
+
+Drones have been used for more efficient delivery for several years now, and they have been under development for decades before that. Our project is not new in that sense. What we did recognize, however, is that intelligent drones are rarely affordable, and only drones with the bare minimum electronics cost under $30. Our goal was to develop a low-cost drone that can support more advanced capabilities (in the future, with further development), like object detection and, with higher quality motors and larger size, lightweight package delivery. According to our brief market research, the biggest impediment to widespread drone delivery systems is the cost to develop and build them. Therefore, demonstrating that drones can be quickly designed using the newest, lowest-cost technology available to us, is extremely important for companies to continue to invest in these more efficient delivery methods.
+
+How we built it
+
+
+Solidworks and some advanced CAD design techniques to design the chassis and propellers
+3D printers for design 
+MPlab X for programming the PIC32MX
+PIC C libraries
+lots of reading datasheets!
+working with Georgia Tech's soldering equipment and protoboards to develop electronic devices
+
+
+Challenges we ran into
+
+The lack of accessibility to certain resources that we thought we would be able to use, such as the PCB mills, led to some issues. After we had already lost a significant amount of time designing a PCB that we were unable to produce, we had to make our own from scratch. More specifically, we had to create a board with the small protoboard that was provided.  Unfortunately, we ran into some minor, unforeseen connection issues with the protoboard that we could not fix because the makerspace was already closed (and we did not have access to a soldering iron). This meant that we were unable to finish configuring the circuit hardware, so we could not test any of our code or demonstrate what tangible progress we had made. We also ended up having to work as a team of three instead of four after one of our teammates left early because he was not feeling well. He did not choose to continue working with us online.
+
+Accomplishments that we're proud of
+
+We were glad that we were able to efficiently build a prototype and get it working quickly. We did not get far enough in the project to look back on much, but we are proud of the skills that learned and applied during the event!
+
+What we learned
+
+
+Better soldering techniques
+Solidworks & some advanced CAD design techniques
+PIC C libraries/ microcontroller programming
+3D printing
+Microelectronics/hardware
+
+
+What's next for Drones as a Solution to Last-Mile Delivery Inefficiencies
+
+Because the majority of our team is from Clemson, we hope to continue working on the drone and finish it in the near future. A long-term idea is to implement object detection using an IR camera and a low-cost FPGA, similar to a real delivery drone, but this would be time-consuming and involve more learning.
+","",https://youtu.be/sLfEyQcbVD0,"Body Track, Electrical Track","c, mplab, pic32, solidworks, 3dprinting",,Clemson University,2,yes,yes,no,no
+Mussel Men,https://robotech2022.devpost.com/submissions/317464-mussel-men,Submitted (Gallery/Visible),Pending,Submit,04/01/2022 14:49:40,"Inspiration
+
+Mussels
+
+What it does
+
+Mussel Poop
+
+How we built it
+
+Buoy 
+
+Challenges we ran into
+
+Accomplishments that we're proud of
+
+What we learned
+
+What's next for Untitled
+","",https://youtu.be/sQTGOU9LiJ0,"",musssels,,Georgia Institute of Technology - Main Campus,3,no,no,yes,no
+Untitled,"",Draft,Pending,Manage team,04/01/2022 17:02:11,"","",,"","",,"",0,"","","",""
+Teliot,https://robotech2022.devpost.com/submissions/317474-teliot,Submitted (Gallery/Visible),Pending,Submit,04/01/2022 18:37:53,"Inspiration and background
+
+Our team was looking for ways to identify unnecessary usage of water. Then we thought of the toilets in our homes that had an added feature of the dual-flush and started to wonder why we don’t see this feature in public restrooms. It turns out that according to most common public toilets, one flush releases an average of 1.6 gallons of water. However, the amount of water released for liquid waste is 1.1 gallons in dual-flush toilets in residential homes. This would mean that if a user urinates in a public bathroom, there could be about 0.5 gallons of water saved per flush if the toilet could classify solid and liquid waste. However, because the process is not readily available in many places and is not automatic, the water savings are not maximized, which is the issue we decided to analyze and develop a solution for. Looking at the Atlanta Jackson-Hartsfield International Airport as a case study, we calculate that the upfront cost of installing our design of dual-flush toilets will break even with the water savings in approximately 22 months. With the feasibility of this project checked, we decided to move on to the details and the implementation of our design on a conceptual level.
+
+Conceptual Design
+
+How flushometers work
+The link prior shows how flushometers work with an explained diagram and annotated part names. We determined that the size of the bypass hole is directly responsible for the amount of time it takes for the upper and the lower chamber to equalize in pressure. This would mean that a larger bypass hole size would lead to a shorter time for the pressures to equalize, leading to a decreased amount of water flow for the reduced flush. The opposite would be true for a full flush with a smaller bypass hole size. In order to do this, we had to first create a detection system that could distinguish feces from urine. We decided that the most cost effect and accurate method for this was using a ultrasonic sensor that would be built into the inner surface of the toilet bowl. This sensor would be set to a certain range so that solid matter would be detected and the state of the sensor would recognize the feces. This would then communicate with a central microcontroller that controls a servo motor, which is connected to a long cylindrical rod embedded inside the flushometer. This rod would control the bypass hole size as either normal or covered depending on whether the sensor's input signal. The next steps would include fine-tuning this process so that the desired flow volume of 1.1 gallons and 1.6 gallons would be released for the two cases. 
+
+
+
+Challenges we ran into
+
+
+To determine what type sensor we wanted to use, we first had to ask ourselves the question of what characteristic distinguish feces from urine. This was difficult because many factors differentiated these two components, but only volume and proximity to the bottom of the bowl were useful for sensing. 
+Sensor choice for distinguishing solid from liquid waste was difficult because we were originally considering using capacitance sensors because of its ability to detect solids through a wall. We were planning to use the sensor and attach it on the outer surface of the bowl, but we found out the range of the sensors were maximum of 3 inches, which was not enough. This led us to a different design using an ultrasonic sensor that would be embedded on the inside of the bowl. 
+While creating a mechanical device that would switch from reduced flow to normal flow, we had to come up with a mechanism that would have two degrees of freedom controlled by a servo motor (vertical for diaphragm and horizontal for linear actuation). To get around this issue, we came up with a different mechanism that uses a rod from the top that is controlled by a linear actuator so that there is only one degree of freedom. 
+
+
+
+Accomplishments that we're proud of
+
+We are proud that we were able to not only learn how a general flushometer works in the span of less than 24 hours, but also identify a method in which we could insert our knowledge to create a more efficient system that saves more water. We believe that we navigated the obstacles and challenges presented to us and used the time and resources allotted to us in the best manner. 
+
+What we learned
+
+We learned that developing a system that can be applied in real-world situations is very difficult, and that there are many variables not related to technology that we must consider. Despite all the obstacles and roadblocks we encountered while flushing out our ideas more in depth, we also learned how to prioritize our goals and communicate with one another to efficiently delegate tasks. 
+
+What's next for Teliot
+
+Teliot is very excited for our future works. Regardless of the results of this competition, we plan to:
+
+
+
+Experimentally test and validate the rod mechanism for bypass hole size classification. We also wish to explore continuous bypass hole size changes rather than the discrete system we developed. 
+Transfer the wired connections from the sensor to the microcontroller to a wireless system.
+Prototype and build the bowl system to include the ultrasonic sensor with casing.
+Begin to talk with public institutions such as airports and schools for employing this technology across the state.
+
+
+Thank you for the opportunity to brainstorm and develop solutions to real-world issues. This weekend has really been a pleasure and we would like to thank everyone for making this event possible. 
+",https://docs.google.com/presentation/d/14RA0ZQWkWvzT5SepGb--SSgMflC4OPqtuZTfYwyaJrU/edit?usp=sharing,https://youtu.be/Qkw3G9eHs2s,"[Texas Instruments] Most Creative Hack , [Texas Instruments] Most Sustainable Hack, [Texas Instruments] Most Accessible Hack","solidworks, epa-database, world-government-data",,Georgia Institute of Technology - Main Campus,3,yes,no,yes,no
+Acacia Tower,https://robotech2022.devpost.com/submissions/317477-acacia-tower,Submitted (Gallery/Visible),Pending,Submit,04/01/2022 19:01:44,"Inspiration
+
+From poaching of endangered species in Africa to illegal logging in Latin America, criminal economies have the potential to greatly harm Earth's natural resources and precious qualities. Our team sought to find a solution and a way to protect Earth from humans. Introducing the Acacia Tower - an off-grid AI sentry tower.
+
+What it does
+
+The Acacia Tower is an organization's first line of defense when it comes to protecting resources and land. From solar power and sustainable Li-ion batteries, this device uses computer vision to detect and verify potential threats of interest, cache notable instances, and notify the user via text message. 
+
+How we built it
+
+Structural Design
+
+Taking advantage of additive manufacturing, the team created detailed CAD models and 3D printed major structural components, including the electronics canister, support trays, and solar panel risers. 
+
+Electronics
+
+In sequence, the solar panel (mounted atop the canister) is wired directly to a charge controller. From 12 Li-ion batteries, three battery subpacks were wired in series, each with 4 batteries in parallel. The battery pack and charge controller are wired directly to a buck converter, which runs to the Raspberry Pi. From this computer, a camera and a 4G module are incorporated, allowing the team to utilize the versatility of the Raspberry Pi.
+
+Software
+
+Our team utilized a React.js frontend with Material UI and Uber's DeckGL Mapping Library for displaying mapped sentry location points, as well as pulling all sentry-captured images for review. The application's backend utilizes Golang with GORM for the backend web-server and a PostgreSQL database instance, both of which are currently being live hosted using Google Cloud Platform. 
+
+https://github.com/k-lombard/Acacia
+
+Challenges we ran into
+
+One major challenge we encountered was the iterative delay for 3D printing and design. Waiting several hours for parts to finish can delay other parts of the process, so we had to learn to manage every second accordingly. 
+
+Accomplishments that we're proud of
+
+As a team, we are very proud of our progress. From conceiving an idea, to creating CAD models within the next hour and 3D printing through the night, to waking up an hour after we go to sleep in order to start another print - our team hustled. It's amazing and fulfilling to go from absolutely nothing to a fully developed prototype in less than 48 hours.
+
+What we learned
+
+One main thing that we learned was the criticality of time and time management. For example, we learned to utilize downtime (while all of our 3D printers were running) to work on other subsystems, such as electronics and software development. We spent a great amount of time testing those subsystems, which would not have been possible if we were inefficient in other areas. We also learned the importance of subsystem interactions - in other words, always know how one subsystem interacts with another and plan accordingly. Do not be thinking one step ahead, but rather, think two or three steps ahead. Small inconveniences can have a ripple effect if they are not addressed early on.
+
+What's next for Acacia Tower
+
+We have several plans for the Acacia Tower:
+
+
+Fully integrating IR/thermal imaging camera for low-light environments
+Exploring more sustainable (but weather-proof) materials for construction
+Marketing towards government/private/defense sector
+Optimizing energy usage and developing failsafe mechanisms 
+
+",https://github.com/k-lombard/Acacia,https://youtu.be/wNwONJuRV9c,"Body Track, Electrical Track, Design Track, [Texas Instruments] Most Creative Hack , Software Track, [Texas Instruments] Most Sustainable Hack, [Texas Instruments] Most Accessible Hack","cad, 3dprinting, raspberry-pi, python, chakra, tensorflow, golang, react.js, material-ui, deckgl, postgresql, google-cloud",,Georgia Institute of Technology - Main Campus,2,yes,yes,yes,yes
+Susplaneable,https://robotech2022.devpost.com/submissions/317478-susplaneable,Submitted (Gallery/Visible),Pending,Submit,04/01/2022 19:03:35,"Inspiration
+
+What it does
+
+How we built it
+
+Challenges we ran into
+
+Accomplishments that we're proud of
+
+What we learned
+
+Planes fly
+
+What's next for Susplaneable
+",https://github.com/zhengkyl/susplaneable,https://vimeo.com/695276652,"",javascript,,"Georgia Institute of Technology - Main Campus, Purdue University",1,yes,yes,yes,yes
+TBD,"",Draft,Pending,Project overview,04/01/2022 19:12:15,"","",,"","",,Georgia Institute of Technology - Main Campus,1,"","","",""
+Butts Detective,https://robotech2022.devpost.com/submissions/317486-butts-detective,Submitted (Gallery/Visible),Pending,Submit,04/01/2022 20:07:17,"Inspiration
+
+Georgia Tech is a smoke-free campus with the goal of creating a healthy, safe environment for all students and faculties. However, it is difficult to monitor smoking behaviors on campus. We think collecting butts on the street and forcing people who were smoking to stop would match our goal of sustainability.
+
+What it does
+
+Our robot after full development with proper hardware will be able to randomly patrol the campus. It will clamp the cigarettes butts on the streets and throw them into the trash can the robot carries. It also detects smoking behaviors on campus and takes the cigarettes away from people who were smoking. If the person leaves before the robot successfully clamps the cigarettes, our robot will adjust its velocity to catch the person.
+
+How we built it
+
+We used some online sources to develop a trained deep learning model that recognizes smoking behaviors using the camera. We assembled a robot car as a prototype due to hardware limitations. The robot car is able to move around itself and avoid obstacles without predetermined routes while the completed robot should be assigned to specific routes based on the campus map. We also mounted a camera as it can detect smoking behavior by running the model. In the future, we will need robotic arms to achieve the clamping action.
+
+Challenges we ran into
+
+The Lafvin smart car kit lacked parts. Some of its components do not function as they should, it took us a large amount of extra time to fix. 
+
+Accomplishments that we're proud of
+
+We managed to assemble the robot and wrote an obstacle avoidance program that can run on its Arduino. We also managed to use the ESP32-CAM module to live stream video and use our deep learning model to recognize if the person is smoking or not.
+
+What we learned
+
+Deep learning can be combined with Robots to complete various tasks such as behavior detection. We have obtained a deeper understanding of computer vision in this project.
+Also, this project is heavily hardware-focused but many of us do not have in-depth knowledge in this field. During the process, we learned the common errors and how to troubleshoot them. Meanwhile, we learned to deploy video streaming from microcontrollers.
+
+What's next for Butts Detective
+
+Due to the lack of a Mechanical Arm, we did not achieve the original plan of taking the cigarettes away from smokers. We may continue to work on this function in the future.
+","",https://youtu.be/evty392eQFU,"","python, arduino",,Georgia Institute of Technology - Main Campus,2,yes,yes,no,yes
+EMC-Squared,https://robotech2022.devpost.com/submissions/317492-emc-squared,Submitted (Gallery/Visible),Pending,Submit,04/01/2022 20:32:54,"Inspiration
+
+The advancement in the fields of AI and VLSI, alongside the penetration of Wireless technology and accessible Internet, has led to a rapid rise in the Consumer Electronics market. As per a recent report [1], the Consumer Electronics Market size was valued at over USD 1 trillion in 2020 and is estimated to grow at a CAGR of more than 8% from 2021 to 2027. Consumer Electronics find their use-case in several domains, from Entertainment Systems to critical applications like Healthcare and Automotive. In general, these products must adhere to rigid standards and undergo several compliance tests, of which testing for Electromagnetic Interference and Electromagnetic Compliance (EMI/EMC) is the most crucial. Electronic devices (even without transmitters) emit electromagnetic radiation, just as a byproduct of switching currents and voltages inherent to electronic circuitry. Without limits to the amount of unintended electromagnetic radiation from electronic products, the electromagnetic spectrum could be adversely affected, and frequency bands reserved for radio transmission could become compromised [2]. In critical cases like Medical, EMI/EMC performance can mean the difference between life and death – hence performing extensive EMI/EMC testing is a necessity and cannot be substituted for. 
+This process, although necessary, is expensive, inaccessible, repetitive, and power-hungry i.e., not sustainable. As the number and complexity of devices will increase the need for this testing will proportionally surge. With the goal to accelerate the process and promote sustainable practices in EMI/EMC testing, we designed a cross-functional simulation environment that aids in the process of physical EMI/EMC testing. For instance, while designing a Class-III medical device like an Insulin Pump – the body of the pump with the location of components can be imported into our environment and a detailed EMI/EMC analysis (at various frequency bandwidths) can be generated. This would also promote the use of sustainable materials – as the cost of testing them significantly drops. The key idea of this project is to reduce the dependency on EMI/EMC test centres by providing apriori information through our simulation environment.
+
+What it does
+
+Standard EMC testing procedures subject a device to electromagnetic radiation to check how it behaves under such conditions. The circuit for these devices is intricately designed to inhibit interference and shield radiation from the circuit. These are then rigorously evaluated for EMI/EMC in a controlled environment – which is an expensive process, thus discouraging many small-medium scale (non-critical) products to avoid this entirely. This in turn adds to the problem of stray EM radiations. Our simulation environment was designed to be more accessible, and easy and to introduce sustainability in the energy-intensive EMI/EMC testing process through early identification, and mitigation of potential design hazards in electronic subsystems through state-of-the-art simulation and visualization. The simulation environment can apply a bandwidth of frequencies to a user-defined 3D model of any material and can generate a report with a heatmap of EM field strengths, and can also determine likely frequencies at which the EMI/EMC test might fail for a certain component location.  
+
+How we built it
+
+The simulation environment was developed with the following design requirements:
+
+
+Generality – The users can design (on Ansys) and import any of their designs and perform this analysis on their custom structures. The users can also choose the packaging material of the body and of the components from a pre-defined library or a custom material. This means the user can at any time introduce a new material for a component/body and do a feasibility study of its effect on the EM field.
+Flexibility – The users can choose the one-or-more regions-of-interest for analysis and have the choice of selecting the bandwidth of frequencies for which they want to evaluate the design.
+Sustainability and Reliability – The analysis algorithm is built using Bayesian Optimization. That is, given runtime constraints it’ll have an efficient and faster Design Space Exploration and a higher likeliness of reaching global optima within a finite number of iterations. This ensures reliable solutions are achieved with limited compute time and energy – efficient and reliable. 
+
+
+The simulation environment employs three software/tools: Ansys, Python and MATLAB. Structure and material specifications and component placement and generates a 3D model with Ansys. The 3D model is then fed into a MATLAB code which then performs the optimization. Finally, the algorithm outputs critical bandwidth; the range of frequencies at which the EM field strength will be above the safe threshold at the given point based on the optimized component location.
+
+Challenges we ran into
+
+
+Algorithm occasionally failed to compute the EM field at certain points due to complex 3D structure.
+3D modelling on Ansys due to lack of design background
+Unable to perform full-scale validation due to lack of computational resources
+No open-source literature available for EMC devices and methods
+
+
+Accomplishments that we're proud of
+
+
+Successfully developed a working Proof-of-concept of our idea.
+Designed a sustainable solution that can be easily adopted into the industry. 
+Tested our system for 3 different material compositions and observed promising results. 
+Approached the problem by applying Design Thinking techniques.
+Interviewed an industry professional in the field of EMI/EMC testing to get real-world insights.
+
+
+What we learned
+
+
+Association between device structure and Electromagnetic Compatibility 
+Relation between material variability and EMC
+Device electromagnetic compatibility dependence on the bandwidth of frequencies
+Modeling structures with the Ansys tool
+Bayesian Optimization of the 3-dimensional objective function
+Visualization of results with MATLAB
+Ansys, Python scripting, and optimization in MATLAB
+
+
+What's next for EMC-Squared
+
+
+Scale the algorithm to multiple vents and components
+Scale the algorithm for multiple points and form a region of interest
+Bombard the device with EM waves with varying strengths and modulation
+Work closely with the industry to add features that can further aid in the EMI/EMC test.
+
+","",https://youtu.be/kisHsjW9NXk,"[Texas Instruments] Most Creative Hack , [Texas Instruments] Most Sustainable Hack, [Texas Instruments] Most Accessible Hack","matlab, python, ansys, machine-learning, bayesian-optimization",,Georgia Institute of Technology - Main Campus,3,no,no,no,yes
+WAL-LEAF,"",Draft,Pending,Project overview,04/01/2022 20:40:40,"","",,"","",,Georgia Institute of Technology - Main Campus,3,"","","",""
+Pacisafe,https://robotech2022.devpost.com/submissions/317495-pacisafe,Submitted (Gallery/Visible),Pending,Submit,04/01/2022 20:57:30,"Inspiration
+
+According to UNICEF, one of the leading cause of deaths in Sub-Saharan Africa is malaria, which accounted for 274,000 deaths of children under the age of 5, many of which are infants, in 2019. 
+This translates to one child under 5 dying of malaria every 2 minutes. One of the prominent symptoms of malaria is fever. Thus there is a need for detecting fever in infants early on.
+
+What it does
+
+How we built it
+
+Challenges we ran into
+
+Accomplishments that we're proud of
+
+What we learned
+
+What's next for Pacisafe
+","",https://youtu.be/icNqO_WcK80,"",amazon-web-services,,Georgia Institute of Technology - Main Campus,2,no,yes,yes,yes
+Got Methane?,"",Draft,Pending,Additional info,04/01/2022 21:07:13,"Inspiration
+The grumbles of our stomachs filled the Klaus Atrium. When brainstorming ideas on Friday night, hunger dominated our minds. All of our thoughts were circling back to food in some way; inefficiencies in processing, harvesting, and growth, food waste, single use cutlery and tableware. Finally, we thought about an earlier stage of food, the one that lays in the fields all day eating grass. The processes around utilizing a cow’s resources are extremely inefficient, and yet the least sustainable part of the process is the most natural one. Cows are responsible for over 40% of the world’s methane emissions, just from their mouths (not their farts, contrary to popular belief). Since methane is around 80 times worse for the environment than CO2, we thought this was a hugely impactful problem to try and tackle. The only existing ‘solution’ we could find is changing the cow’s diet to mostly seaweed, but this isn’t a good solution since very few ranchers are willing to adopt dietary changes to reduce methane emissions at the cost of decreasing the quality and quantity of output from their cows.
+
+What it does
+This is where ‘Got Methane?’ comes into play. We’ve designed wearable technology for cows that captures the air from a cow’s burp so that its methane can be extracted, stored, and put towards more sustainable practices. For example, captured methane would be sold by farmers to the energy sector to be used for sustainable energy production. The process of combusting methane to produce energy converts methane to CO2 and water. Thus, instead of methane being released into the air by cows, the methane goes towards energy production, and a smaller amount of an 80x less harmful gas is released(CO2). Our mechanism captures these methane burps with a tube secured to the halter of a cow, which is a padded rope around a cow’s head used to lead them. One end of the tube goes down their head between the eyes and opens just above their mouth, while the other end of this tube connects to a vacuum pump. This pump then connects to a large form fit Tedlar bag, which is designed specifically for containing VOC (Volatile Organic Compounds) gasses, such as methane. Also, the Tedlar bag has a check valve, which enables gas to only enter the bag through the tube connected to the vacuum pump, and not reverse pressurize the pump. Our system is attached to the cow in a saddle - manner with buckle straps with a hard shell on top to hold electronics and the vacuum pump. The final component is a methane sensor attached to the tube near the mouth of the cow that detects when the cow has burped or is releasing methane. This triggers the vacuum pump to turn on and suck the cow’s breath through the tube, capturing it in the Tedlar bag. Twice a day, cows are led through automatic milking stations, so the addition of a bag emptying station would only add a single easily automatable process to their routine. The future goal would be to add automatic battery charging when the cow is in the stall as well as emptying the bags. Both of these things only require making one soft connection which is extremely cheap and viable to autonomously implement. 
+
+How we built it
+After researching existing air pump systems and making an in-depth plan for how to build our fully functioning cow methane container, we started by searching for parts at home depot and McMaster-Carr, and finally made a bill of materials. After conceptually designing our methane intake system, we wanted proof that our conceptual product could truly be made into reality and ensure that we weren’t overlooking any aspects of our design. Thus, we created a 3D version using Solidworks. We individually imported pieces from McMaster-Carr, and organically drew the tube system and custom halter. After designing it in Solidworks, we initially wanted to make a full-scale prototype, but we quickly realized that the special parts we needed weren’t something we could gather from the maker-spaces on campus. Instead, we decided to make a representation of the main functional parts. To start, we 3D printed the head of the cow. Next, we machined wood into two semicircles and connected them with dowels to make a rib cage of sorts that represents the body of the cow. In order to make this actually look like a cow, we connected the 3D printed head and the wooden cage with glue and covered the cage in gray cloth. After which, we 3D printed the mock vacuum pump and tube and connected them with hot glue to the entire ‘cow’ as well. Lastly, we tied a halter out of yarn and put it onto the head.
+
+Challenges we ran into
+When it comes to taking a cow's breath away, we found that roses, charm, and a nice dinner just didn’t seem to do the trick. The challenges that we ran into while designing our product were all about validating feasibility and finding the exact right parts to make our mechanism. For example, when trying to find our air pump and voltage requirements we had to calculate the airflow speed, volume, and contents of a cow’s belch. The only airflow data we could find online was about putrescine molecules from human farts which have a different speed, density, and composition than a cow’s belch. We had to dig through chemistry and physics textbooks and random research papers on particle trajectory to apply methods and derive equations for our specific situation. It was only after calculating the speed and volume of a cow's burp that we were able to search for a vacuum pump that was cost-effective, small in size and weight, and had the required flow rate to optimize collecting a cow’s burps. Another challenge that we faced was safety. By having electronics and methane in close proximity, we had to ensure that all of our wires and electronics could be properly insulated and grounded to remove the risk of any static electricity buildup. We originally wanted active carbon methane filtration inside of the Tedlar bag on the cow’s back, but we pivoted from this idea in order to keep the electronic components as far away from the methane as possible, thus minimizing the risk of combustion. 
+
+Accomplishments that we're proud of
+The level of research we collected about cow methane emissions, its inner workings, and the many technologies and areas of expertise even touching the area was truly something to be proud of. As silly as becoming a subject matter expert in the aerodynamics of cow methane emissions sounds, it truly is a feat we’re pleased to have accomplished. Aside from learning the intricacies of the diffusion rate of cow belching, we’re most proud of our full-scale 3D design. We created a working, wearable, and organic technology with real-world products. Performing a multitude of flow, pressure, and power calculations all to create a product that we can confidently say works, and is scalable, instills in us an unmatchable feeling of success and pride. The only way that we could have topped this hackathon is if we had access to cows to truly execute full-scale production of the design and see it in action ourselves.
+
+What we learned
+In our ideation process, we learned about the importance of constraints, complex planning, and 3D design. For constraints, we started by thinking too big, which slowed us down in the beginning as we tried to tackle too much at once. By constraining ourselves to smaller problems and more specific instances we were able to target one specific aspect of a problem and fully develop the solution. This is where our complex planning skills greatly developed. We realized after every single part that we added we needed smaller supporting parts, regulatory parts, and cross integrative parts. It was difficult to resist diving in and immediately building our prototype, but we learned that the way to make the best product was by planning and designing every single aspect before touching any physical part and building a body. By doing this we found that we really deeply understood every single aspect of our design and could make optimizing decisions during the design process; for example, analyzing the pros and cons between a self-priming pump and a peristaltic pump. Finally, we had to learn about how to optimize and scale our 3D models so that we could 3D print them for our model body. 
+
+What's next for Got Methane?
+As much as we love animals, we don’t think our next step is going to be buying and taking care of a cow to measure our methane capture efficiency. In all seriousness though, our current nozzle for ‘vacuuming’ up cow burps is our most significant means of power consumption and also isn’t able to get 100% of a cow's methane output. We want to improve this by having a more passive input method that also has a greater capture efficiency since the end goal is capturing 100% of a cow's methane output. Additionally, we would like to explore more feasible ways of incorporating CO2 methane filtration in the cow’s harness rather than relying on outside sources for such ‘purification’. The only non-industrial methods available today are experimental polymeric matrices with metal-organic framework and nano-pores. This technology is unfeasible, because of its cost reflected by the fact that it’s only produced in singular quantities by research labs. If we are able to capture all of the methane put out by cows (remove 40% of global methane emissions) and put this directly to use in more sustainable practices, we would dramatically support the recovery and well-being of the environment and our oh-so-important home, planet Earth.
+",https://grabcad.com/library/got-methane-cow-model-1/details?folder_id=11998454,https://youtu.be/C9hMe6elIMk,"Body Track, [Texas Instruments] Most Creative Hack , [Texas Instruments] Most Sustainable Hack, [Texas Instruments] Most Accessible Hack","solidworks, imovie, grabcad",,Georgia Institute of Technology - Main Campus,3,yes,no,no,no
+Spatial-Speech Isolation & Captioning,https://robotech2022.devpost.com/submissions/317503-spatial-speech-isolation-captioning,Submitted (Gallery/Visible),Pending,Submit,04/01/2022 21:33:07,"Inspiration
+
+Our primary inspiration was the sci-fi idea of having overhead subtitles for every conversation in real life - with self-translating captions if you're speaking with someone in a different language!
+Delving into it, we discovered the cocktail party problem: a classic problem at the intersection of physics, mathematics and CS - given mixed audio from multiple sources (like a party), isolate the voice of each speaker. There has been considerable progress, in academia and applications, towards solving this with spectral decomposition of audio - using the fact that different voices, music, and other audio objects produce audio with fundamentally different physical characteristics (like amplitude and frequency) that can be used to separate them. But this is a far cry from true spatial isolation that can fulfill our vision - so we set out to create a practical method to spatially isolate audio sources.
+
+What it does
+
+The implementation consists of 2 parts: an Android app and a spatially-aware robot mounted on an RC car. The robot on the car contains 2 microphones that spatially identify the source of audio, i.e, where a particular speaker is relative to it. A phone running the app is mounted on the car. After the robot spatially isolates the speaker, it rotates the phone towards them, and then the app listens to their speech and transcribes it to text captions correctly positioned relative to the speaker.
+
+How we built it
+
+The app was built using Google cloud resources for speech-to-text translation, and Android Studio to build the app. The robot uses an Arduino, 2 microphones, and other required circuitry to do a bunch of math that compares the different audio received by the 2 different microphones to identify the position of a speaker and rotate the phone towards them.
+
+Challenges we ran into
+
+Our initial biggest hurdle was the sea of academic discourse to sort through. After catching up to modern research, we delved into implementing a model theorized literally 20 days ago (ViVoT) - using a Deep Learning model to create an AR phone app that does spatial audio isolation with the camera and phone microphones to overlay live captions above each speaker. However, halfway through implementing the paper's model, we realized that the paper didn't provide all the necessary details to implement it - and on emailing its author, we got a confirmation that it would only be fully released after the paper was accepted by the journal and published. We then decided to pivot to our current robot + app as an alternative mechanical/ECE solution for spatial isolation similar to older papers we had read, instead of a pure machine learning one.
+While working on the robot, Arduino's sampling rate is actually too low to use 2 microphones to normally identify the source of a particular sound; we ultimately had to overclock it to make it work!
+
+Accomplishments that we're proud of
+
+Integrating the Google cloud NLP RNN model for speech-to-text transcription and captioning into the app natively on Android was a challenging task of combining multiple tech stacks together. The process of debugging the Arduino and microphones was painstaking, but ultimately a happy achievement.
+
+What we learned
+
+What's next for Spatial Source Speech Captioning
+
+We are still in touch with Dr. Montesinos to pursue applying his Deep Learning model as an AR app once the paper is fully published. The scope of spatial audio isolation for captioning is limitless - hearing aid systems/speech enhancement, noise control: military and industrial, noise pollution, audio surveillance & acoustic signal processing), automatic music transcription, and of course, AR Glasses for live overhead subtitle captioning are all known and developed use cases for this technology that we are excited to further delve into in the future!
+",https://github.com/Aryan-Poonacha/source_tracker,https://youtu.be/Dyjq48SI2x4,"Body Track, Electrical Track, Design Track, Software Track","arduino, android-studio, google-cloud, java, circuitry",,"Duke University, Georgia Institute of Technology - Main Campus",2,yes,yes,yes,yes
+Untitled,"",Draft,Pending,Manage team,04/01/2022 21:43:28,"","",,"","",,Georgia Institute of Technology - Main Campus,1,"","","",""
+Untitled,"",Draft,Pending,Manage team,04/01/2022 21:47:01,"","",,"","",,Georgia Institute of Technology - Main Campus,0,"","","",""
+Sea Cleaner,"",Draft,Pending,Project overview,04/01/2022 21:49:03,"","",,"","",,"Georgia Institute of Technology - Main Campus, University of Georgia",1,"","","",""
+PetCat,https://robotech2022.devpost.com/submissions/317512-petcat,Submitted (Gallery/Visible),Pending,Submit,04/01/2022 22:00:49,"Inspiration ocean cleaning is a problem
+
+What it does
+
+How we built it
+
+Challenges we ran into
+
+Accomplishments that we're proud of
+
+What we learned
+
+What's next for PetCat
+",https://github.com/HoodedPitohui/ACO-Underwater-Plastics,https://www.youtube.com/watch?v=dQw4w9WgXcQ&t=7s,"","matlab, solidworks, powerpoint",,Georgia Institute of Technology - Main Campus,3,no,no,yes,yes
+Sustainable Sustainability,"",Draft,Pending,Additional info,04/01/2022 23:28:17,"Inspiration: Sung-Kyu Lim, Dragon Ball, Buzz, Ace, Godzilla
+
+What it does: impress Sung-Kyu Lim professor at Georgia Tech
+
+How we built it: tba
+
+Challenges we ran into: getting started/time conflicts
+
+Accomplishments that we're proud of: showing up
+
+What we learned: this Robotech is the first ever robotics hackathon at GT
+
+What's next for Sustainable Sustainability: the product itself
+","",https://www.youtube.com/watch?v=VjzgbZL12VI,"",brainhoney,,Georgia Institute of Technology - Main Campus,0,yes,no,no,no
+CleanSeas,https://robotech2022.devpost.com/submissions/317527-cleanseas,Submitted (Gallery/Visible),Pending,Submit,04/01/2022 23:28:43,"Inspiration
+
+Inspired by past projects in marine conservation as well as designs ranging from The Ocean Cleanup to CleanSpace orbital debris collection projects.
+
+What it does
+
+CleanSeas is an intelligent ocean cleanup robot that detects and collects sizable pieces of trash while leaving marine animals, plants, and microorganisms alone.
+
+How we built it
+
+Our model is designed with Fusion360, soon to be undergoing design analysis in Autodesk CFD. Our software is programmed in C and uploaded to an Arduino Mega microcontroller. A Lafvin mechanical arm kit is used in this prototype to represent what the final version might look like.
+
+Challenges we ran into
+
+How to navigate underwater without endangering wildlife or destroying the hardware, how to develop a visualization algorithm that reliably distinguishes between jellyfish and plastic bags (when even turtles can't distinguish between them), how to maneuver underwater without pushing target trash away.
+
+Accomplishments that we're proud of
+
+What we learned
+
+What's next for CleanSeas
+","",https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley,"Electrical Track, Design Track, [Texas Instruments] Most Creative Hack , Software Track, [Texas Instruments] Most Sustainable Hack","autodesk-fusion-360, c, arduino, lafvin, cfd",,"Princeton University, University of Central Florida",3,yes,yes,yes,yes
+Internet Controlled Teleoperation Robot,https://robotech2022.devpost.com/submissions/317542-internet-controlled-teleoperation-robot,Submitted (Gallery/Visible),Pending,Submit,04/02/2022 04:20:53,"Inspiration
+
+Updating soon
+
+What it does
+
+How we built it
+
+Challenges we ran into
+
+Accomplishments that we're proud of
+
+What we learned
+
+What's next for Teleop - Internet Controlled Robot
+","",https://youtu.be/4i3BSTGeQuQ,"Body Track, Electrical Track, Design Track, [Texas Instruments] Most Creative Hack , Software Track, [Texas Instruments] Most Sustainable Hack, [Texas Instruments] Most Accessible Hack",python,,sharda university,0,yes,yes,yes,yes
+"Hi-Five, Low Waste","",Draft,Pending,Additional info,04/02/2022 04:32:38,"Inspiration
+
+Our inspiration for this project was the drastic rise in room temperature during college parties from so many warm bodies being packed together in a room. Not only does this make everybody at the party hot and uncomfortable, but it is also a major waste of gas being used to heat the frat house or party room. 
+
+What it does
+
+This brought about idea to build a robotic device that keeps track of the number of people that enter a building on a daily basis and adjust the average room temperature accordingly.
+
+How we built it
+
+Challenges we ran into
+
+Accomplishments that we're proud of
+
+What we learned
+
+What's next for Hi-Five, Low Waste
+","",https://www.youtube.com/watch?v=dQw4w9WgXcQ,"Electrical Track, Design Track, [Texas Instruments] Most Creative Hack , Software Track, [Texas Instruments] Most Sustainable Hack","arduino, swift, tinkercad",,Georgia Institute of Technology - Main Campus,2,no,yes,yes,yes
+Pleurotus Ostreatus Automaton,https://robotech2022.devpost.com/submissions/317554-pleurotus-ostreatus-automaton,Submitted (Gallery/Visible),Pending,Submit,04/02/2022 08:07:24,"Inspiration
+
+This project was inspired by our group's personal connections, interestingly, to the mushroom space—one of our group members is close friends with several people in the agriculture industry and a passionate researcher at Penn State specializing in mushrooms.  Because we had unique insight into the underutilized capabilities of oyster mushrooms, we felt well-equipped to design an efficient solution and dive into this market. 
+
+What it does
+
+We are essentially building an autonomous robotic oyster mushroom farm, wherein oyster mushrooms are grown in a controlled environment in coffee grounds or sawdust (which would otherwise be disposed) and harvested autonomously.  We can hence produce oyster mushrooms, known to have many health benefits, and the bi-product from the waste actually becomes a very good fertilizer, important amid a global soil erosion crisis.
+
+Our current prototype holds a 3D-printed cylinder with holes in it—mushrooms grown in the cylinder are forced to protrude through these holes.  We also have a model blade, which can autonomously spin around the cylinder, chopping the mushrooms which can then be collected.  We also have a humidity and temperature sensor that allow us to monitor the conditions of the growth environment.  Our fully developed plan also includes a vacuum that collects mushroom spores, allowing us to continuously replace harvested mushrooms, and a water pump and filament to modify, respectively, the humidity and temperature of the environment.
+
+We currently have a web app integrated with a camera sensor to enable live monitoring of the environment and manual controls if necessary, and a computer vision pipeline that can detect when mushrooms are first present and when they begin flowering, at which point the harvest will automatically begin with no human intervention necessary.  We are working towards integrating a neural network that will over time monitor the progress given the environmental conditions to assess the optimal values; these features will allow us to become an efficient, profitable, and sustainable farm with very minimal labor.
+
+How we built it
+
+For our prototype, we 3D printed a simplified version of a blade and the cylinder used for growth, and used hot glue for stands.  We mounted the blade to a stepper motor with a Raspberry Pi as a central module to control the motor and all of our sensors.  The remainder of our parts for our full product plan were CADed in Solidworks.
+
+On the software side, we interfaced between Python and our Raspberry Pi module to read from our camera and humidity/temperature sensors, which are sent to a web server designed in Flask for live monitoring and manual controls.  We also created an OpenCV pipeline by tuning a color range filter based on the expected color of oyster mushrooms compared to that of our system, and tested it against several images to verify near-perfect differentiation between a mushroom-free environment, an environment with budding mushrooms whose spores need to be collected for future mushroom growth, and an environment with flowering mushrooms that need to be harvested.  We have also begun the implementation of a neural ordinary differential equation system; we will collect data over time both from our robot and those that we sell to consumers, and use that data for this network to converge on optimal humidity and temperature conditions for growth.
+
+Another emphasis of our project is sustainability and scalability.  We created a full business plan and a Lean Canvas to ensure that we had a clear grasp on a problem and a reasonable means of pursuing its solution.  We discovered that the market for mushrooms is actually skyrocketing, oyster mushrooms being the largest beneficiary, partly because of their many health benefits.  We are hence confident that we are entering an underserved market for gardeners, consumers, restaurants, and farmers.
+
+Challenges we ran into
+
+Mechanically, our 3D printer tolerances were not as we expected; our holes shrunk, so we used a soldering iron to melt the PLA to make more room.  But that melting distorted the plastic, so our blade is now held tightly by duct tape to ensure it doesn't collide with the cylinder.  Solidworks assembly also returned errors and invalid arrangement of parts, so certain features were made using shared sketches, an easier way to relate part geometries while still preserving complex features.
+
+For firmware, the library for a sensor that we were trying to use also had been deprecated and did not work as expected; hence, we had to find a different library after hours of debugging became fruitless.  However, the alternative library, while newer, relied on ""circuit Python"", which was not compatible with the remainder of our code base.  Eventually, we discovered an open-source pure Python library that did still work, but it took many hours of debugging to diagnose the problem in the first place.
+
+On the software side... multithreading.  In order to run our web application, we had to have both the web app and the robot running.  That meant that the web application would occupy one thread and the image capture would be running on the other thread.  There were, however, a few cases where variables would need to be displayed around the same time the values were being initialized, as well as a few times where both threads were utilizing the same values, leading to a race condition that was particularly challenging to discover.  However, the debugging process did help us learn a lot about Flask—which we had never used before—and some fairly common problems with multithreading safety.
+
+Accomplishments that we're proud of
+
+• Developing a creative and impactful plan, and being able to make each component move as intended while maintaining our ingenuity and complexity too much.
+
+• Learning how to use Flask and successfully isolating and repairing the race condition to achieve a functional supporting web application
+
+• Learning to use OpenCV and applying it to a real-life situation with very good experimental results
+
+• Maintaining focus on our goals overall despite the difficulty of debugging and the need for creative, unplanned fixes, like the duct tape on our system to compensate for the degraded plastic and salvage our 3D printed material, and the alternative library after our initial library was too outdated.
+
+What we learned
+
+We discovered that complex geometries are often best made using sketches that reference their surroundings instead of independent sketches; these are more efficient good design practices.  We also learned how to use Flask to develop web applications that facilitate interaction with other devices, OpenCV for camera detection in a real-world situation, and a Raspberry Pi with Python to control our motors and sensors, which was unfamiliar as most of our previous experience had been with Arduino systems.  Because our team had a mix of software, mechanical, and electrical expertise, working on a project of this scale together involved extensive collaboration and helped us all gain experience with the ideation and implementation processes in many subfields of robotics.
+
+What's next for Pleurotus Ostreatus Automaton
+
+While we have a model of our planned product, we have to continue developing our model to actually complete the build and test our design decisions.  We are also hoping to take advantage of our access to potential customers and experts in our space to ensure that our design is as economically viable as our current data suggests.  Once we are ready to go to market, we are hoping to sell our oyster mushrooms at local farmers' markets, and advertise our fertilizer and the robot itself to farmers we know and eventually expand to retail stores like Home Depot.
+","https://github.com/N8BWert/Pleurotus-Ostreatus-Automaton, https://docs.google.com/presentation/d/19EiZ7T7d_PWRLdc_MkPWV6oT4SqFDwOcTgxzNNcQWdE/edit?usp=sharing",https://youtu.be/GbP5y0OIDaU,"Body Track, Electrical Track, Design Track, [Texas Instruments] Most Creative Hack , Software Track, [Texas Instruments] Most Sustainable Hack, [Texas Instruments] Most Accessible Hack","python, raspberry-pi, solidworks, flask, opencv",,Georgia Institute of Technology - Main Campus,3,yes,yes,yes,yes
+Project,"",Draft,Pending,Project details,04/02/2022 08:34:10,"Inspiration
+
+Inspo
+
+What it does
+
+How we built it
+
+Challenges we ran into
+
+Accomplishments that we're proud of
+
+What we learned
+
+What's next for Project
+","",https://www.youtube.com/watch?v=zL19uMsnpSU,"",c++,,Northeastern University,2,"","","",""
+GreenJoule,"",Draft,Pending,Additional info,04/02/2022 09:45:00,"","",,"Electrical Track, [Texas Instruments] Most Creative Hack , Software Track, [Texas Instruments] Most Sustainable Hack, [Texas Instruments] Most Accessible Hack","",,Georgia Institute of Technology - Main Campus,1,no,yes,no,yes
+One Smart Apple,https://robotech2022.devpost.com/submissions/317643-one-smart-apple,Submitted (Gallery/Visible),Pending,Submit,04/02/2022 13:34:47,"Inspiration
+
+Growing up one of the lessons we were taught was to not waste food. This simple lesson has stayed with me throughout my life and has led me to explore what implications this practice has. Through research I learned that food waste actually contributes to a lot more than just the waste of food. Rather wasting food also leads to the waste of various other resources including water and a contribution to gas emissions among others. I wanted to focus on apples specifically since picking and eating apples was the staple snack and fruit of my childhood, it's also easier to begin with a narrower and specific project scope. It is also the example fruit used in many circumstances and even in photos to represent food/fruit as a whole.
+
+What it does
+
+The ""One Smart Apple"" sorting device uses a DA meter, x-ray, and software to identify a variety of characteristics of an apple- size, ripe-ness, blemishes, among other aspects- to determine the potential and most sustainable use of that apple. By taking these factors (and additional facts such as smaller apples can last longer) into account, the device is able to translate that data into an action by the motor further down the conveyor belt to sort the apple into it's corresponding bin. By determining how long the apple lasts or the general quality, the specific apple that fits within the previously established criteria could be sent to it's optimal location be it long term, short term storage, composting (decreases food in landfills), low grade/clearance section level food, etc. This would maximize profits as well as promote sustainability. 
+
+How we built it
+
+The device is comprised of a conveyor belt that transports the apples one by one through the scanner and analyzer. This component is comprised of the DA meter, X-ray detection, and AI software. The data is then process and communicated via Bluetooth signals to the motor component for sorting. Additionally a visual broadcast feature could be added to transfer the data, information, and visuals to a nearby computer screen if desired.
+The motor component and bluetooth receiver would be underneath the conveyor belt closer to the bins to control the movement of the rudder like components to allow for sorting.
+
+Challenges we ran into
+
+Difficulty finding the amount of smart sorting devices currently in use and even apple sorting facilities since these can be a part of the farm or a separate plant. 
+
+Accomplishments that we're proud of
+
+The process design of utilizing the different characteristics of the apples to send them to different places that would maximize the amount of apples used along with profit. Additionally these efforts contribute to a more sustainable practice and environment. 
+
+What we learned
+
+Food waste contributes to a lot more waste than I previously recognized.
+How the apple industry's farm to fork supply chain works.
+
+What's next for One Smart Apple
+
+The development of the software to process the x-ray and DA meter's data to determine the cutoffs for the different characteristics of the apples (there is literature to support and guide in this process) for sorting. 
+Furthermore, another step includes the building of the physical device or like prototype by combining the components mentioned.
+","",https://youtu.be/C4dY21r0UMA,"Design Track, [Texas Instruments] Most Creative Hack , [Texas Instruments] Most Sustainable Hack","photoshop, powerpoint",,Georgia Institute of Technology - Main Campus,0,no,no,yes,no
+A.F.K,https://robotech2022.devpost.com/submissions/317647-a-f-k,Submitted (Gallery/Visible),Pending,Submit,04/02/2022 13:47:01,"Inspiration
+
+Each year when I travel to Bangladesh I get old phones from family and friends to redistribute to friends back home. The phones which would otherwise sit unused in drawers or end up in a trash somewhere see use. The first laptop I bought refurbished failed twice on me. After I opened it up to see what was wrong, I realized that the parts that failed were all third party parts that did not originally ship with the computer. I wished then that I had known more about the repair history of the laptop.
+
+What it does
+
+AFK (Accountability, Frugality, Knowledge) is a application which allows consumers and repair shops to log their devices repairs to allow for more transparency and incentivize consumers to purchase or sell more of their used devices. For consumers to use, the application is free though we hope to offer a paid version with business analytics and eBay and Amazon API integration for refurbish and repair stores. In addition to this, it directly links consumers to the documentation they need to repair their own devices they purchase or browse.
+
+How we built it
+
+We used GitHub to document our design process , Figma to create a working mockup, and java initially to create our first prototype.
+
+Challenges we ran into
+
+We ran into difficulty trying to determine the logistics of the pitch. Specifically how to incentivize consumers to tell the truth when registering devices. We initially tried to implement a database with a javafx application and while we were unsuccessful, our mistakes taught us how to setup the database and connect at a basic level.
+
+Accomplishments that we're proud of
+
+We are proud of our mockup and the depth of our solution. We think that it has a real use as a product we ourselves would actually use.
+
+What we learned
+
+We learned about the business aspect of pitching, risk analysis, profitable business models, as well as basic database management with Python.
+
+What's next for A.F.K
+
+In the future we hope to expand our infrastructure for other high value items which create waste. We could try to work directly with first-party refurbishing centers, though this would be difficult as it acts against their interests to sell more devices. We also want to expand our documentation of each device, maybe we could include videos of people replacing the parts or helpful tips for certain devices. It is very common for people removing the screens and keyboard on laptops to accidentally rip the ribbon cables, so if consumers were notified of how to properly remove it for their model it could prevent this.
+","https://github.com/FIshWIthLegs9161/robotech-1, https://www.figma.com/proto/g8dR8cBsCW29rN3hGOEhlU/AFK-App?node-id=14%3A441&scaling=scale-down&page-id=0%3A1&starting-point-node-id=14%3A441&show-proto-sidebar=1",https://youtu.be/t7o3oqfVEIw,"Design Track, [Texas Instruments] Most Creative Hack , [Texas Instruments] Most Sustainable Hack, [Texas Instruments] Most Accessible Hack","java, figma",,"University of Georgia, Georgia Institute of Technology - Main Campus",2,no,no,yes,no
+Autonomous Swarm Marine Robots,"",Draft,Pending,Project details,04/02/2022 14:37:25,"About RoboTech
+
+More Information can be found on their Website
+
+
+RoboTech is a unique kind of hackathon, focused on building robotics projects with a real world impact. Students will participate in one or more of the competition tracks: Design, Robot Body, Circuitry, and Software. The Design track will be a presentation of your idea to a panel of judges, while the other three will be more traditional hackathon project submissions with a project expo. You are free to participate in only the Design track, only another track, or any combination! This year, RoboTech's challenge is to create a project focused on sustainability.
+
+
+Our Submission
+
+We are submitting to the Software and Body Track. If you're reading this README, you've probably found your way to our Github page. Our official submission was made to the DevPost page.
+
+The Problem Statement
+
+One of the most detrimental factors to the environment is the pollution and destruction to the oceans and all marine life. Aquatic habitats are incredibly beneficial for the sustainability of the planet since they act as massive carbon sinks and lower overall greenhouse gas emissions.
+
+We've decided to focus on Algae blooms and their impact on lake/pond environments. Algae blooms produce toxins that kill marine animals, contaminate potential drinking water, and even create dead zones in large bodies of water. 
+
+Dead zones are areas in a body of water that have minimal oxygen and aren't capable of supporting marine life. Algae blooms among other climate change stressors have contributed to an approximate 250,000 square kilometers of dead zones on the globe. 
+
+Algae blooms are generated due to excess nitrogen and phosphorus in the water. These chemicals are pumped into the ocean from sewage effluent, manufacturing byproducts, etc.
+
+These blooms block sunlight and consume large amounts of oxygen, and spread very quickly. The toxins produced from blooms are harmful to both humans and marine life.
+
+The Solution
+
+Autonomous Swarm Cleaning Robots: ASCR.
+
+Our strategy will be to deploy a swarm (coordinated fleet) of aquatic rovers to clear out large Algal blooms within a body of water of any size.
+
+There are 2 major components: 
+
+
+The Supervisor Module
+Fleet of Aquatic Drones
+ 
+
+The supervisor is deployed initially and will survey the immediate surrounding area using a collection of a few sensors, and will plan sub-routines for the fleet of aquatic drones it carries.
+
+Each drone is outfitted with an array of sensors, as well as a scrubbing and storage aparatus to clear out Algae and store it. The drones all have pre-determined cleaning paths organized and managed by the supervisor. Multiple runs are expected due to the small size of the drones and the amount of algae they can hold before needing to come back to the supervisor to expel the collected algae.
+
+The Hardware
+
+A CAD model of an aquatic drone has been created using SOLIDWORKS and showcases the key features our drones will have. These include:
+
+
+Ultrasonic Sensors to measure depth and proximity to other drones
+Water level Sensors to measure water displacement
+Electric Motors powering a dual-propeller system for maneuverability
+
+
+The Software
+
+The software for a simulation was written for the higher-level planning and organization of the drone network. We've offered a graphical simulation depicting a lake full of algae being cleaned by aquatic drones following a pre-determined route written by the supervisor.
+
+We've taken 2 approaches to path-planning:
+
+
+A* Search Algorithm: Heuristic based search
+RRT*: Optimized Random Sampling
+
+
+We found that our Algae problem was counter-intuitive to a solution like A* Search. Despite being (one of) the best searching algorithms, it struggles with vast open environments and the complexity scales with the number of Algae spots that need to be cleaned up. The algorithm thrives in close quarters, where it can seek optimal paths using it's heuristic as as strong lead on how to bias expansion. In an open environment however, such a heuristic isn't as powerful due to ability for the robot to basically move anywhere!
+
+Code for A* Search can be found in the files:
+
+
+[pathFind](pathFind.py) -> source code for A* Search
+[testingPathFinding](testingPathFinding.py) -> executable script with tunable parameters and random board generation
+
+
+RRT* is an optimized random sampling algorithm. In essence, random points are sampled given some constraints about the problem and a path is generated to the sampled point. This is repeated up to a certain depth and each layer can bias the generation depending on the state of the problem to improve performance.
+
+Code for RRT* can be found in the files:
+
+
+[simulation](simulation.py) -> RRT* Implemented into Sim
+
+
+Within simulation.py, there are many parameters (with documentation!) that can be tuned to better visualize the varying levels of performance that comes with different number of drones, drone speed, RRT depth, etc. Note that being over-generous with the parameters can induce large computations on the PC and may not run fast or at all. However, once you're past the black screen while the paths are being generated, the simulation will keep going until the MAX_DEPTH of paths for each drone are reached. 
+
+Take note of what areas of the lake the drones are more drawn too...
+
+Future Software Goals
+
+
+ Writing a (exceedingly) clever heuristic function to make A* Search a viable option 
+ Implement quadrants to split lake into quadrants for each drone to have their path planned in to improve performance 
+ Incorporate threading to boost performance 
+ Implement more GUI features to improve interactivity with parameters 
+ Write more documentation because you can never have too much docs 
+
+
+Running our code
+
+Currently, our latest driving code is in simulation.py. Run the file in order to see the simulation being output on the GUI built using the pygame library
+",https://github.com/Sharwin24/RoboTech,https://www.youtube.com/watch?v=dQw4w9WgXcQ,"","solidworks, python",,"Northeastern University, Georgia Institute of Technology - Main Campus",3,"","","",""
+TEST,https://robotech2022.devpost.com/submissions/317736-test,Submitted (Gallery/Visible),Pending,Submit,04/02/2022 16:25:04,"Inspiration
+
+What it does
+
+ndslnsdvlndlknf
+
+What we learned
+
+What's next for TEST
+","",http://youtube.com/playlist?list=PL4xqRMQ2GXanl6WC9u8TMZaDGgVnO2MeI,"Design Track, [Texas Instruments] Most Creative Hack ",java,,Georgia Institute of Technology - Main Campus,0,no,no,yes,yes
+Mitigating Soil Pollution in Agriculture using Robotics,https://robotech2022.devpost.com/submissions/317740-mitigating-soil-pollution-in-agriculture-using-robotics,Submitted (Gallery/Visible),Pending,Submit,04/02/2022 16:40:13,"Inspiration
+
+Farming and agricultural backgrounds in an ever growing society
+
+What it does
+
+Test for soil pollution in agricultural settings
+
+How we built it
+
+SolidWorks and other CAD software
+
+Challenges we ran into
+
+Costs, integration of various softwares,
+
+Accomplishments that we're proud of
+
+What we learned
+
+What's next for Mitigating Soil Pollution in Agriculture using Robotics
+","",https://www.youtube.com/watch?v=uviedbtyJy8,"",solidworks,,"University of Florida, Georgia Institute of Technology - Main Campus, Purdue University",2,no,no,no,no
+Test ,https://robotech2022.devpost.com/submissions/317743-test,Submitted (Gallery/Visible),Pending,Submit,04/02/2022 17:01:42,"Inspiration
+
+What it does
+
+How we built it
+
+Challengesdnclsdv we ran into
+
+Accomplishments that we're proud of
+
+sdv,nslv
+
+What we learned
+
+What's next for Test
+","",https://www.youtube.com/watch?v=UNnKAk79wws,"",pyth,,Georgia Institute of Technology - Main Campus,0,no,no,no,no
+After Market Autonomous Vehicle Kit,https://robotech2022.devpost.com/submissions/317744-after-market-autonomous-vehicle-kit,Submitted (Gallery/Visible),Pending,Submit,04/02/2022 17:01:51,"Inspiration: Historian Mark Foster has estimated that “fully one-third of the total environmental damage caused by automobiles occurred before they were sold and driven.” He cited a study that estimated that fabricating one car produced 29 tons of waste and 1,207 million cubic yards of polluted air. Increasing the longevity of a vehicle by retrofitting it with technology that would otherwise create demand for new vehicles ultimately reduces the environmental impact of the industry. Less demand means less production, less production means less pollution, and less pollution means a greener earth.
+
+What it does: It is an aftermarket kit that you can install into your vehicle to have it drive autonomously. The autonomous functions enabled by the kit do not impede on the drivers ability to operate the vehicle manually as well.
+
+How we built it: We got a Logitech Racing Simulator and Vex Robotics parts and assembled the Vex Parts to fit to the station. In it is 3 mechanisms, the wheel, the stick shift, and the pedals. One moves the stick shift, one steers the steering wheel, and the last presses the pedals.
+
+Challenges we ran into: Time limit. Doing all of this from Friday night to Sunday morning has been brutal on us physically and mentally. We had people programming, building, and designing all at once. Making sure we all were on the same track was very important otherwise we may have gotten in each others way.
+
+Accomplishments that we're proud of: We are all very proud of pursing such a big project in such little time. If it were not for each one of us we would not have gotten this far with this project. Finally, that the project is finished, it functions, and it functions well is an accomplishment in itself.
+
+What we learned: We learned a lot of mechanical systems to complete this project. We had to learn about 5 bar linkages. We had to learn a bit of C++ to program everything. We have to get and learn a different 3d printing slicer to print a custom piece in the steering mechanism. That and we learned how to use Vex parts with other non-Vex parts. Normally we just use Vex metal or motors with itself because that is how its intended to be used. But with this we had to find a way to use it with the Logitech Racing Simulator.
+
+What's next for After Market Autonomous Vehicle Kit: Perfecting it. Because we had a limited time frame for working we'd definitely want to spend a bit more time making the system work smoothly. From there brainstorming how it could be better after having a proof of concept.
+","",https://www.youtube.com/watch?v=X_8Nh5XfRw0,"Body Track, Design Track, [Texas Instruments] Most Creative Hack , [Texas Instruments] Most Sustainable Hack, [Texas Instruments] Most Accessible Hack","c++, creality, solidworks, vexkit, logitechracingsimulator",,"Kennesaw State University, Georgia Institute of Technology - Main Campus",3,yes,no,yes,no
+I. SAC,https://robotech2022.devpost.com/submissions/317745-i-sac,Submitted (Gallery/Visible),Pending,Submit,04/02/2022 17:06:16,"Inspiration
+
+It is finally the weekend, and you finally have the time to head out for a long-awaited shopping trip. At the start of the shopping adventure, everything seems perfectly fine. However, as you put more and more goodies into the shopping cart, the cart becomes heavier and clumsier. At this moment, you hope that you no longer need to push the cart, but the cart of goodies will follow you automatically, you can then leave the burden of their behind and indulge in your shopping adventure! 
+
+What it does
+
+I.SAC (Intelligent Shopping Assistance Cart) enables shoppers to shop with their hands off the shopping cart. I.SAC is a next generation shopping cart that allows shoppers to go around the store, putting all their goodies into a shopping that follows them around. 
+With I.SAC’s automated tracking system, customers do not need to push their cart while shopping, but simply let the cart follow them. The integration of object tracking, detection and avoidance allows I.SAC to create a safer shopping environment for customers, avoiding accidents such as carts bumping into customers or the loss of control of carts.
+For parent shoppers, I.SAC will enable them to pay more attention to their child/children, as it alleviates their need to control and keep an eye on the shopping cart. With children nearby, parents can shop more easily and do not need to face the situation where that must leave their child and cart unattended in order to grab something, just because the cart with their children is not easy to push into the aisle.
+For elder or disable shoppers, I.SAC enables these customers to shop without needing to push the cart. Unlike traditional shopping carts, I.SAC will dynamically follow the customer, keeping a safety distance between itself and the customer, so that the shopping cart will never bump into any person or things. With this object detection feature, customers could rely on I.SAC and enjoy more in their shopping. 
+
+How we built it
+
+As a prototype, we use two different robots to represent our customer and I.SAC shopping scenario. To mimic real customer behavior, we built a robot car with Arduino. The robot moves randomly around representing the customer, checking out different items and stopping here and there. As for I.SAC, we implemented Turtlebot3 with ROS (robot operating system) to realize object following and obstacle avoidance. 
+For I.SAC (Turtlebot3), the shopping cart will first establish a connection between itself and the customer (IR remote car). The connection for our initial prototype is that I.SAC will recognize the customer and start following them. Before the customer finish shopping, the robot will consistently follow the customer wherever they go. If a pedestrian or obstacle appears in I.SAC’s way, I.SAC will stop immediately and go around the obstacle to avoid any collision. 
+
+Challenges we ran into
+
+Some of the major challenges we faced include how to accurately detect different objects and to implement obstacle avoidance with the use of camera and Lidar. For object detection, when the environment condition changes (brightness, background surroundings), it is difficult for the robot to accurately track the desired object. As for object avoidance, the robot will need to go around the obstacle, but could not go out of bound from the original track. 
+
+Accomplishments that we're proud of
+
+With I.SAC, we are able to realize the concept of shopping without needing to push a shopping cart by ourselves. I.SAC allows us to shop without our hands on the shopping cart and to enjoy shopping in a safer and more reliable environment.
+
+What we learned
+
+During implementation, we learned that sometimes an easy task for humans may be exceedingly difficult when it comes to robots. To solve this kind of problem, we will need to divide the problem into different sub-problems. After getting all the sub-problems to function correctly, we could then begin to combine all the parts together. This way, we could be able to break down a large and challenging task into smaller tasks, to divide and conquer, and eventually cumulate all of them together to solve the original problem.
+
+What's next for I. SAC
+
+For the next step of I.SAC, we are going to implement a full-scale prototype and to apply indoor positioning systems on to I.SAC. We will be able to use the indoor positioning system and the camera to track and follow the customer and to avoid obstacles. This will also allow us to take out the Lidar sensor and cut down the cost of each I.SAC.
+","",https://youtu.be/FS7lCo05tY4,"","python, ros, turtlebot, arduino",,Georgia Institute of Technology - Main Campus,2,no,no,no,yes
+TEST 3,"",Draft,Pending,Project overview,04/02/2022 17:21:40,"","",,"","",,Georgia Institute of Technology - Main Campus,0,"","","",""
+Lawn Mover,https://robotech2022.devpost.com/submissions/317752-lawn-mover,Submitted (Gallery/Visible),Pending,Submit,04/02/2022 17:23:11,"Inspiration
+
+sdfkklsdvdsd
+
+What it does
+
+lkdnsvndsv
+
+How we built it
+
+Challenges we ran into
+
+LAWN MOWER
+
+Accomplishments that we're proud of
+
+What we learned
+
+What's next for Lawn Mover
+","",https://www.youtube.com/watch?v=fb3mDCL7m_M,Design Track,java,,Georgia Institute of Technology - Main Campus,0,no,no,yes,no
+FPGA stuff,https://robotech2022.devpost.com/submissions/317769-fpga-stuff,Submitted (Gallery/Visible),Pending,Submit,04/02/2022 17:56:19,"Inspiration
+
+Since we have written a lot of Verilog codes, we decide to utilize the convenience that Vivado brought to us, the block diagram. Making some libraries regarding AI applications may be useful.
+
+What it does
+
+It is an easy-to-use block. Just place it in the block diagram and auto-wire, then everything should supposedly done.
+
+How we built it
+
+We built the block through HLS instead of hand-written since we wanted to make sure we have explored more solution space. Then, we build up a wrapper just to make it easy to use.
+
+Challenges we ran into
+
+Debugging HLS is actually very time-consuming.
+
+Accomplishments that we're proud of
+
+It may have worked? 
+
+What we learned
+
+HLS is hard.
+
+What's next for FPGA stuff
+
+Making up more library stuff is possible.
+","",https://www.youtube.com/watch?v=o-YBDTqX_ZU,Electrical Track,verilog,,Georgia Institute of Technology - Main Campus,1,no,yes,no,no
+Always-on TinyML,https://robotech2022.devpost.com/submissions/317788-always-on-tinyml,Submitted (Gallery/Visible),Pending,Submit,04/02/2022 18:26:13,"Inspiration
+
+Training a single AI model can emit as much carbon as five cars in their lifetimes
+
+What it does
+
+How we built it
+
+Challenges we ran into
+
+Accomplishments that we're proud of
+
+What we learned
+
+What's next for Always-on TinyML
+","",https://www.youtube.com/watch?v=LY1AUFp74I8&list=PL6liSIqFR4BUr7F4pL6aoucjkV3HYZ48J,"","arduino, c++",,Georgia Institute of Technology - Main Campus,0,no,yes,yes,yes
+Beautify,"",Draft,Pending,Project overview,04/02/2022 19:03:46,"","",,"","",,Georgia Institute of Technology - Main Campus,1,"","","",""
+iPlanter: Autonomous Ground Monitoring & Tree Planting Robot,"",Draft,Pending,Additional info,04/02/2022 19:12:05,"Introduction & Motivation
+
+In the next few decades, global agriculture will need to produce more food than it did in the previous ten thousand years in order to sufficiently feed our growing population. As the larger food demand on a daily basis, more sophisticated agriculture techniques should be implemented to (1) reduce the labor-intensive for farmers and (2) elevate the production of crops globally. To solve this problem, we propose an autonomous robot, namely iPlanter, that can automatically capture on-ground images to identify the healthiness of grass on such surfaces and simultaneously plant seeds into the soil.
+
+Challenges
+
+Such robots could assist farmers in plant-seeding and crop monitoring and could be used for large-scale deployment on big farms, especially in the U.S, where the typical farm size is 444 acres. Nevertheless, building such robots is difficult due to the following challenges:
+
+
+The moving mechanism has to be precise and programmable since the distances between trees, later on, are crucial to their growth and reproduction.
+The planting mechanism has to be well-perform since seeds should be buried at a specific depth depending on what kind of trees are planted.
+The program should be programmable, making it easier for users to leverage the system for other kinds of trees.
+
+
+Robot Car & Moving Mechanism
+
+For the moving mechanism, we use the multi-functional smart car kit (LAFVIN). Leveraging the ultrasonic sensors, we build a moving mechanism that could avoid unexpected objects without using a front camera. We also utilize the line tracking sensors to keep the car on a straight line while moving on a surface with a straight line, particularly in-door farming. Together with the provided sensors, the servo motors control the robot's wheels while the robot is moving on the flat surface. 
+
+As our application is an agriculture-based application, the moving mechanism has to be a run then pause procedure. In such cycles, the pause period allows the robot arm to drop the seed into the soil properly before proceeding to the next location. Therefore, the pausing period is calculated carefully to map correctly to the desired distance for a particular kind of tree. The pseudocode is demonstrated below:
+void loop() {
+run();
+delay(t);
+}
+
+Robot Arm & Planting Mechanism
+
+As mentioned earlier, the planting mechanism has to be well-perform since seeds should be buried at a specific depth depending on what kind of trees are planted. In our demo, we assumed that we are planting flowers so we put the seed directly on the soil as a trivial solution. The robot arm runs with two servo motors: one is supporting the arm's movement and one is supporting the claw mechanism (grabbing the seed, etc). The pseudocode is demonstrated below:
+void loop() {
+init_arm_pos();
+move_arm_down();
+move_arm_up();
+}
+
+On-ground Images Analyses
+
+While on its path, iPlanter records footage of the grass with its equipped camera that is saved locally to an SD card. This allows the soil and land monitoring processes to be much easier because while previously there needed to be farmers on the field walking between trees to analyze soil, visual analysis can now be expedited based on the digital media that our robot is able to create. This footage will also perform the double duty of monitoring how the robot is performing regarding the soil working and seed planting processes, allowing us to retroactively improve the robot.
+
+The resulting image is processed offline using Mathematica can be seen here.
+
+Limitations & Future Works
+
+Some of the limitations of our current system along with future improvements include the following items:
+
+
+The images stored in an SD card could be transmitted wirelessly using LoRa communications as this kind of communication can broadcast signals over a long distance (unlike Wi-Fi or Bluetooth).
+Batteries are used to power the robots; however, harvesting energy from the surrounding environment would be an applicable solution to make the system battery-less.
+Due to the shortage of soil moisture sensors at the moment, our robot cannot utilize the soil moisture sensor as a metric to decide whether to seed or not. If that is the case, the soil moisture sensor will be located on the other side of the robot's arm and the collected sensed data will be processed immediately by the MCU.
+
+
+Potential Applications
+
+Broadly speaking, iPlanter system can be an agriculture-based application platform for some other potential applications, not only for agriculture but also for other aspects, in the future, including:
+
+
+Planet probing and surface monitoring (such as Mars, Moon, etc.)
+Battery-free tree planting/seeding robots
+and many more...
+
+
+Conclusions
+
+iPlanter is an extraordinary development and will revolutionize how trees are planted, with implications in many industries such as the lumber industry as well as forestry. By making mass tree planting a reality, our robot will also enable projects such as creating new forests and replanting old forests that have historically been too expensive to try and rebuild. Because our platform is relatively simple, our solution, with little modification, could also be extended to many agricultural applications that could eventually aid farmers in performing the laborious farm work that currently requires human labor.
+
+Acknowledgements
+
+Thank you IEEE GaTech for being the host of Robotech '22, and especially Ivan Torres (Virginia Tech) for helping us wiring and soldering electronic parts to make our project possible!
+
+Source Code Availability
+
+The source code of the design and the image processing algorithm can be found on Github.
+","",https://www.youtube.com/watch?v=2qc8Wt8yHFM,"","arduino, adafruit, esp32, servo-motors, robot-arm, ultrasonic-sensor, line-sensor, mathematica, c/c++",,"Georgia Institute of Technology - Main Campus, The University of Texas at Arlington",2,no,no,no,no
+"Hey Doc, Need a Hand?",https://robotech2022.devpost.com/submissions/317812-hey-doc-need-a-hand,Submitted (Gallery/Visible),Pending,Submit,04/02/2022 19:28:14,"Inspiration
+
+In light of recent/ongoing COVID epidemic, it has become clear that our nursing staff is not only invaluable in the duties they perform, but also heavily understaffed. To help reduce their workload, we wanted to create a robot that could help perform the duties of a surgical assistant.
+
+What it does
+
+Our robot is able to react to voice commands and bring the proper tools to the doctor.
+
+How we built it
+
+We used a robotic arm kit and connected it to an Arduino that could use serial communication to receive signals from a laptop running our speech detection programs. So whenever someone said the name of the tool they want, the machine learning algorithms running on the laptop would process the audio, and send the signal to the robot arm to pick up the correct tool using the gripper of the robot arm.
+
+Challenges we ran into
+
+
+We ran into issues with interfacing our machine learning algorithms with the Arduino. Since the Arduino didn't have the computing power that we needed, we had to create an indirect way to use our speech processing by having the laptop communicate with the Arduino.
+We also had problems powering our electromagnet. The Arduino can only output a maximum of 5V, 
+which is not enough to make a powerful electromagnet. So we thought of using a relay circuit that can be controlled by the Arduino, and can allow a larger voltage and current to flow through the electromagnet. Unfortunately we could not get a very powerful electromagnet thus we decided to go with the gripper instead.
+
+
+We also wanted to use a camera to track the doctor's hands, so the robot would be guided to their hands to know where to drop the tools. We managed to develop a way to track the hand moment and determine the direction in which the arm should move but we had difficulties mounting a camera(difficulties with ESP32 CAM implementation) to the arm.
+
+Accomplishments that we're proud of
+
+We're proud of our robot arm's ability to move as a response to voice commands, and being able to accurately and consistently move how we want it to. We are proud of our build in the short amount of time we had and believe that this technology has several applications and is scalable.
+
+What we learned
+
+We learned a lot about serial communication with the Arduino, using computer vision to track objects,  and using speech processing to determine what commands are being spoken. We also learned a lot about the limitations of the Arduino and methods to bypass those limitations in other ways, like using a relay or using serial communication between our Arduino and a laptop.
+
+What's next for Robotic Surgery Assistant
+
+-We'd like to make the electromagnet on our robot stronger, so it could pick up heavier tools and faster. 
+-For future versions of the robot,  we'd want to be able to implement the hand tracking technology so that our robot could use computer vision to track the doctor's hand and know where to deliver the tools to.
+-We could also work on making our robot arm bigger and stronger so that it can pick up more and heavier tools even faster than it already could. 
+
+
+Another aspect that can be improved upon is using object recognition to identify the various surgical tools to that labelling of the tools is not required.
+
+",https://github.com/pshinde612/Robotech22,https://youtu.be/LVMl2ain-Rs,"Electrical Track, [Texas Instruments] Most Creative Hack , Software Track, [Texas Instruments] Most Accessible Hack","python, opencv, speechrecognition, c++, arduino",,Georgia Institute of Technology - Main Campus,2,no,yes,no,yes
+Improved Mentor Program,https://robotech2022.devpost.com/submissions/317821-improved-mentor-program,Submitted (Gallery/Visible),Pending,Submit,04/02/2022 19:46:54,"Inspiration
+
+a needs assessment and my health care classes
+
+What it does
+
+expands reach of mentorship program and improves communication channels
+
+How we built it
+
+My humongous brain
+
+Challenges we ran into
+
+finding an attainable project solution
+
+Accomplishments that we're proud of
+
+Getting the project done, bby!
+
+What we learned
+
+The process of developing an intervention is difficult
+
+What's next for Behavioral sustainability
+
+Experimentation
+","",https://youtu.be/_62jtAXGzUU,Design Track,"english, powerpoint",,University of Georgia,0,no,no,yes,no
+Wall-ace,"",Draft,Pending,Additional info,04/02/2022 21:37:19,"We wanted to emulate WALL-e and so we wanted to create an autonomous vehicle that could identify and remove trash from a predetermined route. This evolved into the vehicle we have now due to the resources we have available.
+","",https://www.youtube.com/watch?v=iA_B2oaqqvg,"","c, arduino, c++, javascript, solidworks, cura",,"Clemson University, Georgia Institute of Technology - Main Campus",3,yes,yes,yes,yes
+eBin,https://robotech2022.devpost.com/submissions/317886-ebin,Submitted (Gallery/Visible),Pending,Submit,04/02/2022 23:55:54,"Inspiration
+
+After an event, perhaps after this event too, the various trash and recycling bins around CULC and Klaus are inundated with both trash and recycling. It can't be helped with so many people. Unfortunately, that leads to trash in the recycling bins and recycling in the trash bins, defeating the purpose of having four bins in a row and rendering them all trash bins. 
+
+Fear not, we've prototyped a solution: a single bin that sorts itself: the eBin. No longer do people have to think about whether a napkin goes into the mixed paper section or the trash section; all they have to do is throw it in the bin, and the bin does the rest.
+
+What it does
+
+We reinvented the classic trash can, compartmentalizing with wood, four sections for different types of waste: plastic bottles, paper, aluminum cans, and general waste. Above the sections is a rotating filter that turns to where each type of waste should go depending on what the ESP32 Cam sees. The camera communicates through wifi sockets to a computer that analyzes the stream of information in real time and sends back to the smart bin system which section it should turn to.
+
+How we built it
+
+We took a trash can and added electronics and wood and cardboard to it. More specifically, we lasercutted plywood, MDF wood, and cardboard to make the main internal structure. For electronics, we used breadboards, wires, resistors, and jumper cables combined with an ESP32 Cam, Arduino Nano, stepper motor, stepper motor driver, RBG LED to make the embedded system.
+
+Challenges we ran into
+
+As we developed our smart bin, we ran into issues relating to the physical limitations of our breadboard and ESP32. Our arrangement of devices on the breadboard was restricted by its size, and the number of peripherals we could use was restricted by the number of GPIO pins the ESP32 microcontroller has.
+
+Come time to manufacture the bin's architecture, it was a daunting, steep-learning curve for us ECE majors to build from scratch. With just raw material and cumulatively negligible experience, we took to the Invention Studio to lay out and model the compartments, filter assembly, and lid. AJ, the really awesome PI, really pulled through in teaching us the ropes of Solidworks and guiding us through water-jetting and laser-cutting procedures.
+
+On the less physical side, Arduinos are very finicky when it comes to flashing programs onto chained microcontrollers (our ESP32). It was tough figuring out the precise sequence of actions needed to properly load programs in.
+
+On the software side, we initially had challenges setting up OpenCV as many of us had never worked with it. Luckily, documentation and other internet resources helped us push past the initial set up as we learned a smidge about Deep Learning Neural Networks and how to use pre-trained models as classifiers for our recycling bin. In addition, setting up websocket connections was a struggle, likely due to firewalls preventing connection.
+
+Accomplishments that we're proud of
+
+We are proud of creating such a clean yet functional product in the span of a weekend. Not only is the design physically appealing (which definitely surpassed our initial intentions of cardboard-mania), but our CV waste detection performed pretty well. Plus, watching it rotate to the proper section is very satisfying.
+
+What we learned
+
+It was our first time using SolidWorks and EAGLE to make designs. Moreover, it was our first time using lasercutters and waterjets to make the lid and compartments of our bin. Three-fourths of us had had little to no experience with OpenCV. And half of us thought ESP32 was a type of superglue.
+
+What's next for RoboGech
+
+Refining our product
+
+
+More refined object detection and specialized sorting.
+Fine-tuning the YOLO model for commonly thrown out recyclable items. 
+Developing future versions with different material compartments (like plastic or metal).
+Upgrading the stepper motor to turn faster and more precisely.
+Scaling the product size for commercial buildings or outdoor use.
+
+
+Future features to consider
+
+
+Audio indicators that the bin has configured itself appropriately to the waste.
+Tracking bin fullness levels with ultrasonic sensors.
+
+","",https://youtube.com/doesntexistyet,"Body Track, Electrical Track, Design Track, [Texas Instruments] Most Creative Hack , Software Track, [Texas Instruments] Most Sustainable Hack, [Texas Instruments] Most Accessible Hack","esp32, arduino, python, solidworks, waterjet, lasercutter, opencv, c++",,Georgia Institute of Technology - Main Campus,3,yes,yes,yes,yes
+Amphibious Vehicle,https://robotech2022.devpost.com/submissions/317888-amphibious-vehicle,Submitted (Gallery/Visible),Pending,Submit,04/03/2022 00:05:46,"Inspiration
+
+We need an amphibious vehicle to clean our water
+
+What it does
+
+How we built it
+
+Challenges we ran into
+
+Accomplishments that we're proud of
+
+What we learned
+
+What's next for Amphibious Vehicle
+","",https://www.youtube.com/watch?v=TCZkVBon1-Q,"[Texas Instruments] Most Creative Hack , [Texas Instruments] Most Sustainable Hack, [Texas Instruments] Most Accessible Hack","java, python, tensorflow, opencv",,"University of North Florida, Georgia Institute of Technology - Main Campus",1,no,no,yes,no
+Streamline,https://robotech2022.devpost.com/submissions/317894-streamline,Submitted (Gallery/Visible),Pending,Submit,04/03/2022 00:15:55,"Inspiration
+
+Back in 2021, a collaborative effort known as #TeamSeas raised 30 million dollars for the purpose of removing 30 million pounds of trash from the world's oceans. Interested in seeing how this was actually going to happen, I looked into the company slated to do the physical heavy lifting of plastic out of the Great Pacific Garbage Patch. Fast forward to RoboTech 2022, where the core idea is sustainability, and I figured, nothing is more sustainable than caring for the future health of our oceans and rivers. So my teammate and I decided to put our heads together for the good of neither money nor fame, but the fishes—just like our non-profit, The Ocean Cleanup, does everyday—and support them in their endeavor to protect the oceans of the future. To check out the original #TeamSeas and The Ocean Cleanup collaboration video, check out this link. 
+
+What it does
+
+While The Ocean Cleanup already has several units deployed, they openly admit to a few problems with their current designs on their website, such as jamming due to congestion, and as of right now, their sole goal is cleaning up trash, as they fully aligned their interests with #TeamSeas
+We believe that we can implement a few clever designs that solve some of the problems that they are currently facing, specifically the clogging of their garbage collection machines due to congestion, as well as implement our own system as an add-on to their Interceptor that helps them soak up oil from these heavily polluted rivers on top of collecting trash. 
+
+How we built it
+
+Since a lot of our designs are based on existing machinery, we spent a large portion of our allotted time analyzing the function and potential problems of The Ocean Cleanup's fleet of aquatic vehicles (the most notable of which is called the Interceptor), and using SolidWorks to model these machines as well as any changes or additional components we would like to implement. We designed our enhanced trash recovery system on account of the Interceptor clogging up whenever heavy rains wash increased levels of waste downstream. We also came up with an oil collection and separation method that can skim the surface of the water and collect most floating oil and direct it into a chamber where the oil and river water can be further separated. 
+
+Challenges we ran into
+
+Since a lot of our original ideas were an addendum to the Interceptor's base design, we first had to roughly model the actual Interceptor (and all of its components) in SolidWorks. Only then could we show how our components are integrated into the overall design. The sheer amount of computer aided design we had to do for the visualizations of this project to come to life ended up proving very challenging, but in the end, we pushed through it, and were able to fully render our final products. 
+
+Accomplishments that we're proud of
+
+It's not every day you find a direct application of something you learn in lecture, but when you do, it feels glorious. We read a report that during a really heavy storm, strong river currents actually ended up bending in an anchor used to secure the Interceptor ship in place. In our improved design, we employed the concept of double shear (taught in Deformable Bodies) in order to significantly strengthen the anchor. Needless to say, we were quite proud. 
+
+What we learned
+
+The CEO and founder of The Ocean Cleanup is a man named Boyan Slat. He recounts being out on a diving trip once, when he saw more plastic bags floating around than fish. Horrified but in equal amounts inspired, he spent a few years in high school researching the 5 great garbage patches around the globe, and gave a TED talk about his findings. When this TED went viral and people responded with their support, Slat dropped out of college to pursue this idea full time. Through this story, if nothing else, we learned that change will come, but only if you are willing to make it happen. 
+
+What's next for Streamline
+
+While working on this project, we honestly felt like we were part of the team at The Ocean Cleanup. We did in depth research on all of their equipment, brainstormed alternatives, documented possible improvements, and implemented the most impactful changes we could devise—all in the spirit of a non-profit—for free! We hope that we can continue finding improvements for aquatic reclamation projects, no matter how big or small. And who knows, maybe, just maybe, our work will be noticed and recognized by The Ocean Cleanup :)
+","",https://www.youtube.com/watch?v=ROW9F-c0kIQ,Design Track,"solidworks, powerpoint, google-docs, youtube",,Georgia Institute of Technology - Main Campus,1,no,no,yes,no
+Project Peachy,https://robotech2022.devpost.com/submissions/317913-project-peachy,Submitted (Gallery/Visible),Pending,Submit,04/03/2022 01:02:29,"Inspiration
+
+In the future we can see that as the population grows food becomes a more and more common issue. Many processes have been automated within agriculutre, for example watering of plants is completely automated. But one process in agriculture that has seen no automation is harvesting gfruit from trees. THus we wish to take the firs step in automating this process by designing a way to automate the upkeep and yield of these trees.
+
+What it does
+
+By using lidar scans and a matlab library called treeqsm we can transfer lidar scans into a point cloud then contextualize them into cylinders representing a tree. Following that we have automated the process to identify what branches to remove and in turn how to prune the tree.
+
+How we built it
+
+Utilizing lidar scans we collected from a lab at UGA we constructed a algorithm in order to exectue an open center prune. We did this by researching the ways people currently prune trees and found the one that was most common and easily implementable. We then used Matlab to translate the point cloud from the lidar scans into cylinders representing a tree and ported those over to python using open3d. Following that we could finally prune the tree, which we did by using a geometrical and mathematical mixture for our algorithm. We applied an ellipse as a basic way to cut down the center of the tree then calculated for branches that needed removal and took them out. By using these methods we have found a way to automatically calculate how we should prune trees, this will allow us to now program robots to automate the process of pruning trees.
+
+Challenges we ran into
+
+A major challenge was transporting the data from the treeQSM model we found in matlab model back to python. Majority of the issue we ran into was the fact we received euclidean vectors as ouput form the produced cylinders in matlab. But we required roatational matrices in order to place rotate the cylinders after translating them. But after a lot of linear algebra review we were able to create a method to translate our euclidean vectors back into a rotational matrix.
+
+Accomplishments that we're proud of
+
+We're proud of the speed in which we were able to design a rough algorithm to prune peach trees. Not only that but when viewing it with only our eye we can easily see a strong resemblance to images of pruned peach trees. But we wish to cross reference these images with those who are experienced in agriculture in the future.
+
+What we learned
+
+Coming into this project our group had almost no knowledge of how peach tree pruning worked. We simply took a feint idea one of group mates had and ran with it. During this process we were able to apply our knowledge of computer science and mathematics to a topic that was completely foreign to us before. We learned not only about a plethora of peach tree pruning techniques but also 
+
+What's next for Peach Tree Pruner
+
+Our next goals are to achieve not only a more efficient peach tree pruning method but to also build a model that can accurately predict peach tree growth. By doing this we can optimize the space we place peach trees in and perfectly prune them relative to that space in order to maximize our yield in peach tree farms.
+",https://github.com/alandangg/peach,https://www.youtube.com/watch?v=ThYwUJsxl40,"Design Track, [Texas Instruments] Most Creative Hack , Software Track, [Texas Instruments] Most Sustainable Hack, [Texas Instruments] Most Accessible Hack","python, matlab, treeqsm, pyqt5, open3d, raytracing, big-data, numpy",,"De Anza College, Georgia State University, Georgia Institute of Technology - Main Campus",3,no,no,yes,yes
+EcoBud,https://robotech2022.devpost.com/submissions/317929-ecobud,Submitted (Gallery/Visible),Pending,Submit,04/03/2022 01:25:02,"Inspiration
+
+n/a
+
+What it does
+
+How we built it
+
+Challenges we ran into
+
+Accomplishments that we're proud of
+
+What we learned
+
+What's next for EcoBud
+","",https://www.youtube.com/watch?v=dQw4w9WgXcQ,"",n/a,,Georgia Institute of Technology - Main Campus,0,no,no,no,no
+SAPS,https://robotech2022.devpost.com/submissions/317931-saps,Submitted (Gallery/Visible),Pending,Submit,04/03/2022 01:27:36,"Inspiration
+
+Millions of people shop online, especially on Amazon. Our culture has a strong affinity for hyper consumerism. We wanted to create a product that might help fight and reduce the amount of negative environmentally impact products being sold day-to-day.
+
+What it does
+
+SAPS analyzes your potential Amazon purchases and suggests alternative products that are better for the environment, if applicable.
+
+How we built it
+
+We built it using Javascript, HTML, and CSS.
+
+Challenges we ran into
+
+Our main challenge we ran into was learning Javascript, HTML and CSS  as most of our previous experience was in Python and C++, MATLAB.
+
+Accomplishments that we're proud of
+
+We didn't know Javascript, HTML or CSS before this project and we were able to learn a lot in the past day to create the extension.
+We designed a logo from scratch.
+We did research on hyper consumerism.
+And we were able to go to the workshops and learn as much as we could. 
+We're proud of our work over this weekend as this was our first time using and implementing an extension.
+
+What we learned
+
+We learned how to use Javascript and create a chrome extension.
+
+What's next for SAPS
+
+Next, we will continue to add functionality and polish our very first release of the extension.
+",https://github.com/KewalKalsi/sustainable-products-extension,https://youtu.be/YRzorl42tmM,"","javascript, html, css, github",,Kenneaw State University,1,no,no,no,yes
+NoTrashBot,https://robotech2022.devpost.com/submissions/317947-notrashbot,Submitted (Gallery/Visible),Pending,Submit,04/03/2022 01:56:58,"Inspiration:
+
+One of the biggest impediments to sustainability is trash. As the amount of trash ever grows with rising human consumption, the environment suffers as a result. Pollution, deforestation, and danger to wildlife are just some of the disastrous side effects. Hence there is an urgent need to handle the collection of trash, especially plastic and safely recycle it. 
+
+However, could be very hazardous for us humans to handle trash material. It is very expensive to have humans clear litter in the streets, because of increasing wages for humans, and also the usage of human resources for a task that could have been handled by a robot. The human’s time is much better off contributing to the economy using his/her creativity and something which cannot be achieved using AI.
+
+What it does:
+
+
+The robot needs to be able to clearly visually distinguish whether material is trash or not, and then get the exact dimensions of the material to determine the best grasping position
+Trash can come in highly varying shapes, sizes, and colors, and hence detecting the presence of a rubbish object is not a trivial task
+Also, since cleaning up is a highly repetitive task, there is huge scope for automation. It also could be grueling in terms of physical effort needed, so it could be done much better by a robot
+The robot scans each object in its environment indicates its confidence level that the object detected is a piece of garbage, and that inference is visually depicted using different colored LED lights
+
+
+How we built it:
+
+Instance Segmentation associates each pixel of the image with an instance label which is used to identify the objects from the background and also mark the exact boundary of each instance of the object present in the image. Faster R-CNN (Region-based Convolutional neural network) is a commonly used neural network architecture used to predict the bounding boxes of the objects and their labels. Mask R-CNN which extends Faster R-CNN by having another branch that predicts the object mask.
+Here, we use Mask R-CNN to perform instance segmentation to analyze the image obtained from the camera mounted on the robot to identify the pixels in the image that contain trash. 
+
+Zero-shot learning is gaining popularity due to its generalizability. Usually, the model is pre-trained on large state-of-the-art datasets. The model predicts unseen data without any fine-tuning. This saves computational time and resources. It is also difficult to gather large amounts of labeled data, especially for tasks like trash detection and segmentation where the heavy annotation is involved. Zero-shot learning has proven to perform better than trained models through research like Open.ai’s CLIP. We observe that the pre-trained Mask R-CNN model with a ResNet-50 backbone detected bounding boxes and produced heatmaps significantly well for TACO dataset images with zero-shot capabilities. This is attributed to the ability of the model to generalize on out-of-domain data with prior generic knowledge. 
+
+Challenges we ran into:
+
+
+Since trash could come in different shapes and sizes, we would need a huge dataset with a huge variety of objects for the best training results. So essentially, our model is limited by the data available for training.
+We wanted to get the real-time video input of surroundings using the ESP-32 cam wifi module, but we had trouble since the voltage supplied by the USB port in the laptop was not sufficient and we were running into errors. A possible way to address this is by connecting it to a DC external power source (not the laptop USB port), but we were unable to get access to that during the time of the hackathon
+
+
+Accomplishments we’re proud of:
+
+Developing a full-stack solution of training a deep neural network - computer vision model and using that to perform inference on a real-time feed. Further, we controlled the switching of one of three LED’s corresponding to the probability of the prediction that it is trash. Use ‘Red’ to indicate high probability, ‘yellow’ for medium, and ‘green’ for a clean no-trash scenario.
+
+Also, the model even works well in low-light scenarios as depicted in our demo video.
+
+What we learned:
+
+We gained hands-on experience using a Computer Vision-based approach to solve a real-world problem and integrating it with the Arduino. By going through research papers in this domain, we got to know about the current state-of-the-art approaches. We also learned how to plan effectively and manage time efficiently in order to complete a project within a short amount of time.
+
+Further Work / Future Directions:
+
+We have interfaced the output prediction of our model to a microcontroller. The next step will be to integrate it with a robotic gripper arm mounted on a navigator robot base. Visually we have solved the problem of identifying trash. However, it is still a challenge for the robotic arm to be able to pick up. For this, we will use Reinforcement Learning techniques from the paper QT-Opt to enable the robot to generalize to new objects and pick them effectively, robust to external disturbances too. We can also consider training a CNN model to predict the best position in which the object could be grasped in such a way that the object is well balanced and doesn’t slip from the gripper.
+
+This work has the potential to clean up secluded and potentially risky areas such as forests where trash could lead to disastrous long-term outcomes such as danger to wildlife, deforestation, and flooding. Deploying a robot here to handle the collection would be a step closer to sustainable development. 
+",https://github.com/amirtha255/Robotech,https://youtu.be/r8FNOTmElFY,"","python, c, arduino, pytorch, opencv",,Georgia Institute of Technology - Main Campus,3,no,yes,no,yes
+Peer Seeder,https://robotech2022.devpost.com/submissions/317980-peer-seeder,Submitted (Gallery/Visible),Pending,Submit,04/03/2022 02:55:20,"Inspiration
+
+We were inspired by the fitbit app, which enabled competition amongst friends to get into better shape. We wondered if we can make an application like this to promote sustainability.
+
+What it does
+
+PeerSeeder is a social network to compete with friends in planting trees. It is an app where you add friends, and compete with those friends to plant as many trees as possible. The app includes a map of all the trees planted so far. A competition to plant trees is great for sustainibility.
+
+How we built it
+
+Express.js
+Node.js
+jQuery
+MongoDB
+Mapbox GL API
+
+Challenges we ran into
+
+There were a lot of challenges surrounding organizing and managing the data. We had to incorporate the addition of trees and users. We were not able to set up an account system to manage users.
+
+Accomplishments that we're proud of
+
+We were able to host the database on the cloud so that it is accessible from any device and not locally. The database also updates in real-time. We also implemented a user-friendly interface.
+
+What we learned
+
+How to operate databases and manage data. Also the Mapbox API and its functionalities. Overall, we became more familiar with web development. 
+
+What's next for Peer Seeder
+
+Pictures and info about specific tree
+SeedScore
+Add an account system
+Access to friend’s pages
+Monthly goals and awards
+Competition between major corporations 
+iOS support
+",https://github.com/isanjit3/peer-seeder,https://vimeo.com/695344731,"Software Track, [Texas Instruments] Most Sustainable Hack, [Texas Instruments] Most Accessible Hack","javascript, html, scss, express.js, node.js, jquery, mapbox, mongodb",,University of Maryland - College Park,1,no,no,no,yes
